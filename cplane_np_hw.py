@@ -58,7 +58,7 @@ class JuliaPlane(cplane_np.ArrayComplexPlane):
         print("init fx")
         self.plane = self.gen_plane(self.c)
 #         self.plane = np.vectorize(julia(self.plane))
-        f = np.vectorize(julia(0))
+        f = np.vectorize(julia(c = -1))
         self.plane =  f(self.plane)
         print("------------------------------")
         print(self.plane)
