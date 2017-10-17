@@ -1,6 +1,6 @@
 # CS510 CW 7
 
-**Author(s):** **CHANGME**
+**Author(s):** **Chelsea Parlett-Pelleriti and Alice Wong**
 
 [![Build Status](https://travis-ci.org/chapman-cs510-2017f/cw-07-YOURNAME.svg?branch=master)](https://travis-ci.org/chapman-cs510-2017f/cw-07-YOURNAME)
 
@@ -31,9 +31,10 @@
 
 ## Assessment
 
-Analyze in this section what you found useful about this assignment in your own words. Include any lingering questions or comments that you may have.
+It was interesting to see the patterns that were created by the different values of c. It seems like integers have more circular elements to the graphs, whereas complex and non whole numbers look more bumpy and like fractals. To be honest I'm not sure why these are occuring, but I can see patterns as I test out different values of c.
 
-**CHANGEME**
+This project was difficult since I wasn't sure what my output should look like. In past assignments I knew what should come out of my code, so if somehting didn't look right, I'd notice and fix it. Since I don't have much practical experience with complex numbers, this wasn't the case here.
+
 
 ## Honor Pledge
 
@@ -44,4 +45,4 @@ I pledge that all the work in this repository is my own with only the following 
 
 Signed,
 
-**YOURNAME**
+**Chelsea Parlett-Pelleriti, and Alice Wong**
