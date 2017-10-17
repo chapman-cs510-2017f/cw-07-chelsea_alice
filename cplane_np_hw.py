@@ -2,7 +2,7 @@ import cplane_np
 import numpy as np
 import matplotlib.pyplot as plt
 
-# In your python module cplane-np-hw.py, create a function julia(c, max=100) that takes a complex parameter c and an optional positive integer max, and returns a function specified by the following algorithm:
+# In your python module cplane-np-hw.py, create a function (c, max=100) that takes a complex parameter c and an optional positive integer max, and returns a function specified by the following algorithm:
 # The returned function should take one complex parameter z as an input, and return one positive integer as an output.
 # If the input number z has a magnitude abs(z) larger than 2, the function should output the integer 1.
 # Otherwise, set a counter n=1.
@@ -50,18 +50,18 @@ class JuliaPlane(cplane_np.ArrayComplexPlane):
 
         #together------------------------------------------------------------------------
         self.plane = multi + vec_y
-        print(self.plane.reshape(self.c[2],self.c[-1]).transpose())
+#         print(self.plane.reshape(self.c[2],self.c[-1]).transpose())
         return self.plane.reshape(self.c[2],self.c[-1]).transpose()
-    def __init__(self,c = (-2,2,100,-2,2,100)):
+    def __init__(self,d,c = (-2,2,100,-2,2,100)):
         self.c = c
         self.fs = []
         print("init fx")
         self.plane = self.gen_plane(self.c)
 #         self.plane = np.vectorize(julia(self.plane))
-        f = np.vectorize(julia(c = -1))
+        f = np.vectorize(julia(c = d))
         self.plane =  f(self.plane)
-        print("------------------------------")
-        print(self.plane)
+#         print("------------------------------")
+#         print(self.plane)
     def toCSV(self):
         print("PLA")
         print(self.plane)
@@ -73,6 +73,6 @@ class JuliaPlane(cplane_np.ArrayComplexPlane):
 #         self.c = csv[1]
     def show(self):
         #need x of  reals, y of complex, but now they're all reals...
-        print(self.plane)
+#         print(self.plane)
         plt.imshow(self.plane,  cmap = plt.cm.hot, interpolation = 'bicubic', extent = [self.c[0], self.c[1], self.c[3], self.c[4]])
         
